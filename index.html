@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BrownSkin.me // Set-Apart Seasons: Planner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Cormorant+Garamond&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Raleway', sans-serif;
+      background: linear-gradient(to bottom, #E8B860, #F5F1E3);
+      color: #1C1B2F;
+      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    }
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+    }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    .tab-button {
+      transition: all 0.3s ease;
+    }
+    .tab-button:hover {
+      transform: translateY(-1px);
+      background-color: #8A7E60;
+    }
+    textarea {
+      width: 100%;
+      min-height: 150px;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #fffefc;
+      font-family: 'Raleway', sans-serif;
+    }
+  </style>
+</head>
+<body class="p-6">
+  <h1 class="text-4xl font-bold text-center mb-8 tracking-wide">BrownSkin.me // Set-Apart Seasons: Planner</h1>
+
+  <div class="flex flex-wrap justify-center gap-3 mb-8">
+    <button class="tab-button px-5 py-2 bg-[#1C1B2F] text-white rounded" data-tab="calendar">📅 Calendar</button>
+    <button class="tab-button px-5 py-2 bg-[#A9A582] text-white rounded" data-tab="scripture">📖 Scripture</button>
+    <button class="tab-button px-5 py-2 bg-[#EAD7A1] text-black rounded" data-tab="feasts">🕊️ Feast Days</button>
+    <button class="tab-button px-5 py-2 bg-[#B6A28D] text-black rounded" data-tab="planner">📓 Planner</button>
+    <button class="tab-button px-5 py-2 bg-[#5B5F48] text-white rounded" data-tab="affirmations">✨ Affirmations</button>
+  </div>
+
+  <div id="calendar" class="tab-content active">
+    <h2 class="text-2xl font-semibold mb-4">Monthly Calendar with Set-Apart Days</h2>
+    <div class="grid grid-cols-7 gap-2 text-center text-sm font-medium mb-4">
+      <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+    </div>
+    <div class="grid grid-cols-7 gap-2 text-center text-xs">
+      <div class="p-2 bg-white border rounded">28</div>
+      <div class="p-2 bg-white border rounded">29</div>
+      <div class="p-2 bg-white border rounded">30</div>
+      <div class="p-2 bg-white border rounded">31</div>
+      <div class="p-2 bg-white border rounded">1</div>
+      <div class="p-2 bg-white border rounded">2</div>
+      <div class="p-2 bg-yellow-200 border rounded font-bold">3<br/><span class="block text-[10px]">Sabbath</span></div>
+      <div class="p-2 bg-white border rounded">4</div>
+      <div class="p-2 bg-white border rounded">5</div>
+      <div class="p-2 bg-white border rounded">6</div>
+      <div class="p-2 bg-white border rounded">7</div>
+      <div class="p-2 bg-white border rounded">8</div>
+      <div class="p-2 bg-white border rounded">9</div>
+      <div class="p-2 bg-yellow-200 border rounded font-bold">10<br/><span class="block text-[10px]">Sabbath</span></div>
+      <div class="p-2 bg-white border rounded">11</div>
+      <div class="p-2 bg-white border rounded">12</div>
+      <div class="p-2 bg-white border rounded">13</div>
+      <div class="p-2 bg-white border rounded">14</div>
+      <div class="p-2 bg-white border rounded">15</div>
+      <div class="p-2 bg-green-200 border rounded font-bold">16<br/><span class="block text-[10px]">Feast</span></div>
+      <div class="p-2 bg-yellow-200 border rounded font-bold">17<br/><span class="block text-[10px]">Sabbath</span></div>
+    </div>
+    <p class="text-xs mt-4 italic text-center">* Dates shown are based on traditional lunar cycle and should be confirmed by observation.</p>
+  </div>
+  <!-- Scripture Tab -->
+  <div id="scripture" class="tab-content">
+    <h2 class="text-xl font-semibold mb-4">📖 Weekly Scripture Reflections</h2>
+    <textarea placeholder="Write your scripture insights or meditations here..."></textarea>
+  </div>
+
+  <!-- Feasts Tab -->
+  <div id="feasts" class="tab-content">
+    <h2 class="text-xl font-semibold mb-4">🕊️ Appointed Feast Days</h2>
+    <ul class="list-disc list-inside space-y-2">
+      <li>Passover (Pesach) – 14th day, 1st month</li>
+      <li>Feast of Unleavened Bread – 15th–21st day, 1st month</li>
+      <li>First Fruits – Day after Sabbath following Passover</li>
+      <li>Shavuot (Feast of Weeks) – 50 days after First Fruits</li>
+      <li>Feast of Trumpets – 1st day, 7th month</li>
+      <li>Day of Atonement – 10th day, 7th month</li>
+      <li>Feast of Tabernacles – 15th–22nd day, 7th month</li>
+    </ul>
+  </div>
+
+  <!-- Planner Tab -->
+  <div id="planner" class="tab-content">
+    <h2 class="text-xl font-semibold mb-4">📓 Weekly Reflections</h2>
+    <textarea placeholder="Write your weekly plans, goals, and reflections..."></textarea>
+  </div>
+
+  <!-- Affirmations Tab -->
+  <div id="affirmations" class="tab-content">
+    <h2 class="text-xl font-semibold mb-4">✨ Scripture Affirmations</h2>
+    <textarea placeholder="Keep a list of daily affirmations rooted in the Word..."></textarea>
+  </div>
+
+  <!-- Tabs Script -->
+  <script>
+    const tabs = document.querySelectorAll(".tab-button");
+    const contents = document.querySelectorAll(".tab-content");
+    tabs.forEach(button => {{
+      button.addEventListener("click", () => {{
+        const tabId = button.getAttribute("data-tab");
+        contents.forEach(c => c.classList.remove("active"));
+        document.getElementById(tabId).classList.add("active");
+      }});
+    }});
+  </script>
+</body>
+</html>
